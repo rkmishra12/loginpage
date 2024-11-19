@@ -3,9 +3,8 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family:cursive;
+    font-family: cursive;
     text-decoration: none;
-
 }
 
 body {
@@ -21,14 +20,15 @@ body {
 
 /* Login box container */
 .mainbox {
-    width: 600px;
-    height:550px;
+    width: 90%; /* Adjusted width for better responsiveness */
+    max-width: 600px; /* Limit the maximum size */
+    height: auto;
     background: rgba(251, 251, 251, 0.2);
     backdrop-filter: blur(8px);
-    border-radius: 50px;
-    padding: 30px;
+    border-radius: 25px; /* Smaller radius for better mobile view */
+    padding: 20px;
     box-shadow: 0 7px 30px rgb(250, 250, 153);
-    transition: all .3s ease;
+    transition: all 0.3s ease;
     animation: fadeInUp 1s ease-in;
 }
 
@@ -46,38 +46,36 @@ body {
 
 /* Title style */
 .mainbox pre {
-    font-size: 36px;
+    font-size: 28px; /* Reduced size for smaller screens */
     font-weight: 600;
     text-align: center;
     color: #092026;
     text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 }
 
 /* Input field styles */
 .mainbox input[type="text"],
 .mainbox input[type="password"] {
     width: 100%;
-    padding: 15px;
-    margin: 15px 0;
+    padding: 12px; /* Reduced padding */
+    margin: 10px 0; /* Reduced margin */
     background: rgba(255, 255, 255, 0.997);
     border: 2px solid transparent;
     border-radius: 25px;
-    color:black;
+    color: black;
     font-size: 16px;
     outline: none;
     transition: all 0.3s ease;
 }
-.mainbox input[type="password"]:hover{
+
+/* Hover effects */
+.mainbox input[type="password"]:hover,
+.mainbox input[type="text"]:hover {
     transform: scale(1.05);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
-
 }
-.mainbox input[type="text"]:hover{
-    transform: scale(1.05);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
 
-}
 /* Focus effect for inputs */
 .mainbox input[type="text"]:focus,
 .mainbox input[type="password"]:focus {
@@ -88,16 +86,16 @@ body {
 /* Login button styles */
 .link {
     width: 100%;
-    padding: 15px;
+    padding: 12px; /* Reduced padding */
     background: linear-gradient(165deg, #6e7dff, #dbed8e);
     border: none;
     border-radius: 25px;
     color: #092026;
-    font-size: 18px;
+    font-size: 16px;
     cursor: pointer;
     text-align: center;
     transition: all 0.3s ease;
-    margin-top: 20px;
+    margin-top: 15px; /* Reduced margin */
 }
 
 /* Hover and active effects for login button */
@@ -108,15 +106,17 @@ body {
 
 .link:active {
     transform: scale(0.98);
-    background:linear-gradient(165 #6e7dff,white)
+    background: linear-gradient(165deg, #6e7dff, white);
 }
 
 /* Guide text and links */
 .guide {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column; /* Stacked layout for smaller screens */
     margin-top: 20px;
     font-size: 14px;
+    text-align: center;
+    gap: 10px; /* Adds space between items */
 }
 
 .guide a {
@@ -133,16 +133,15 @@ body {
 /* Responsive design for smaller screens */
 @media (max-width: 600px) {
     .mainbox {
-        padding: 20px;
+        padding: 15px; /* Reduced padding */
     }
 
     .mainbox pre {
-        font-size: 28px;
+        font-size: 22px; /* Further reduced size for smaller screens */
     }
 
     .guide {
-        flex-direction: column;
-        text-align: center;
+        font-size: 12px; /* Smaller font for better fit */
     }
 
     .guide a {
